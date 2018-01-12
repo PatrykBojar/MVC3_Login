@@ -72,6 +72,32 @@ function delete() {
     }
   }
 }
+/**
+ * Mostra les persones ordenats per nom
+ * @return No
+ */
+  function ordnombre() {
+    $persona=new personas_model();
+
+    //Uso metodo del modelo de personas
+    $datos=$persona->ordnombre();
+
+    //Llamado a la vista: mostrar la pantalla
+    require_once("views/personas_view.phtml");
+  }
+  /**
+   * Mostra les persones ordenats per edat
+   * @return No
+   */
+    function ordedad() {
+      $persona=new personas_model();
+
+      //Uso metodo del modelo de personas
+      $datos=$persona->ordedad();
+
+      //Llamado a la vista: mostrar la pantalla
+      require_once("views/personas_view.phtml");
+    }
 
 }
 ?>

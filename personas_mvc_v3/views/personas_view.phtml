@@ -6,6 +6,7 @@
     </head>
     <body>
       <h1>PERSONAS</h1>
+      <p><a href="index.php?controller=personas&action=ordnombre">Nombre</a> <a href="index.php?controller=personas&action=ordedad">Edad</a></p>
         <?php
             foreach ($datos as $dato) {
                 echo "{$dato['nombre']} tiene {$dato['edad']} años." .
@@ -14,5 +15,6 @@
         ?>
         <p><a href="index.php?controller=personas&action=add">Alta de Personas</a></p>
         <p><a href="index.php?controller=coches&action=view">Ver Coches <a/></p>
+        <a href="index.php?controller=usuarios&action=logout">Logout</a>
     </body>
 </html>

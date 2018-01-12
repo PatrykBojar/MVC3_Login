@@ -88,5 +88,19 @@ public function delete($id) {
         return false;
     }
 }
+public function ordnombre(){
+    $consulta=$this->db->query("select * from personas ORDER BY nombre");
+    while($filas=$consulta->fetch_assoc()){
+        $this->personas[]=$filas;
+    }
+    return $this->personas;
+}
+public function ordedad(){
+    $consulta=$this->db->query("select * from personas ORDER BY edad");
+    while($filas=$consulta->fetch_assoc()){
+        $this->personas[]=$filas;
+    }
+    return $this->personas;
+}
 }
 ?>
